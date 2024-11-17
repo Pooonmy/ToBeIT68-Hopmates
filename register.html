@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <h1 class="register">Register</h1>
+        <h1 class="head1">สมัครสมาชิก</h1>
+    </div>
+    <div class="container">
+        <form class="inline" id="registerForm">
+            <div class="form-control">
+                    <i class="fa-regular fa-user left"></i>
+                    <input type="text" name="name" class="input-filed" placeholder="|  Name" id="username" required>
+                    <i class="fa-regular fa-user left"></i>
+                    <input type="text" name="studentid" class="input-filed" placeholder="| Student ID" id="studentid" required>
+                    <i class="fa-regular fa-envelope left"></i>
+                    <input type="email" name="email" class="input-filed" placeholder="| Email" id="email" required>
+                <div class="form-group">
+                    <i class="fa-solid fa-key"></i>
+                    <i class="fa-regular fa-eye-slash icon1"></i>
+                    <input type="password" name="password" class="input-filed passwordshow1" placeholder="| Password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <i class="fa-regular fa-eye-slash icon2"></i>
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" name="confirmPassword" class="input-filed passwordshow2" placeholder="| Comfirm Password" id="confirmPassword" required>
+                </div>
+            </div>
+            <div class="nextpage">
+                <a href="login.html" class="loginpage">มีบัญชีแล้วใช่ไหม?</a>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById("registerForm")
+        .addEventListener("submit",(e)=>{
+            e.preventDefault();
+            let name = document.getElementById("username").value;
+            let studentid = document.getElementById("studentid").value;
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            let confirmPassword = document.getElementById("confirmPassword").value;
+
+            if(password !== confirmPassword){
+                alert("Passwords do not match");
+                return;
+            }
+
+            const user = {
+                name:name,
+                studentid:studentid,
+                email:email,
+                password:password
+            }
+
+            localStorage.setItem(email, JSON.stringify(user));
+            alert("Regustration successful! Please login.");
+            window.location.href = "login.html"
+        })
+    </script>
+    <script src="showPassword.js"></script>
+</body>
+</html>

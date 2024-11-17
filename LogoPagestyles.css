@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.splash-screen {
+  width: 440px;
+  height: 956px;
+  background: linear-gradient(to bottom, #4e1796, #ca9ff8);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles specifically for screens smaller than 480px */
+@media (max-width: 480px) {
+  .splash-screen {
+    background: linear-gradient(to bottom, #6f2fc4, #b681ee);
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}

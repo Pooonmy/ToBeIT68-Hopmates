@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Creation</title>
+    <link rel="stylesheet" href="JourneyCreation.css">
+</head>
+
+<body>
+    <div class="splash-screen">
+        <div class="container">
+            <h1>CREATE POST</h1>
+            <div class="form-container">
+                <form>
+                    <label>จุดเริ่มต้น</label>
+                    <div class="input-group">
+                        <input type="text" placeholder="Enter starting point">
+                        <span class="icon">🔍</span>
+                    </div>
+
+                    <label>จุดหมายปลายทาง</label>
+                    <div class="input-group">
+                        <input type="text" placeholder="Enter destination">
+                        <span class="icon">🔍</span>
+                    </div>
+
+                    <div class="date-time">
+                        <label>วัน / เดือน / ปี</label>
+                        <input type="text" placeholder="DD/MM/YYYY">
+                        <label>เวลา</label>
+                        <input type="text" placeholder="HH:MM">
+                    </div>
+
+                    <label>วิธีการเดินทาง</label>
+                    <input type="text" placeholder="Enter mode of travel">
+
+                    <label>ค่าใช้จ่ายโดยประมาณ</label>
+                    <input type="text" placeholder="Enter estimated cost">
+
+                    <label>รายละเอียดเพิ่มเติม</label>
+                    <textarea placeholder="Enter additional details"></textarea>
+                </form>
+                <button onclick="window.location.href='message.html';">Post</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

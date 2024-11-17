@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="header">
+        <h1 class="register">LOGIN</h1>
+        <h1 class="head1">เข้าสู่ระบบ</h1>
+    </div>
+    <div class="container">
+        <div class="image-control">
+            <img src="logo2.png" alt="">
+        </div>
+        <form class="inline" id="loginForm">
+            <div class="form-control">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" class="input-filed" placeholder="| Email" id="email" required>
+                <i class="fa-solid fa-key"></i>
+                <input type="password" class="input-filed" placeholder="| Password" id="password" required>
+            </div>
+            <div class="toregister">
+                &nbsp;<a href="register.html">ยังไม่มีบัญชีใช่ไหม</a>
+            </div>
+            <div class="button-control">
+                <button type="submit">LOGIN</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById("loginForm").addEventListener('submit', function (e) {
+            e.preventDefault();
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            let user = localStorage.getItem(email);
+
+            if (user) {
+                let parsedUser = JSON.parse(user);
+                
+                if (parsedUser.password === password) {
+                    // ถ้ารหัสผ่านตรงกัน
+                    localStorage.setItem('user', JSON.stringify(parsedUser)); 
+                    window.location.href = "scan.html";
+                } else {
+                    alert("Password incorrect. Please try again.");
+                }
+            } else {
+                alert("User not found. Please check your email.");
+            }
+        });
+    </script>
+</body>
+</html>

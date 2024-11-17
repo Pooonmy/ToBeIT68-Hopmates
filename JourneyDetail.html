@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            padding: 0;
+            margin: 0;
+            width:100%;
+            height:100vh;
+            max-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+
+            img{
+                width:100%;
+                height: 300px;
+            }
+
+            .container{
+                width:100%;
+                height:100%;
+                max-width: 500px;
+                display: flex;
+                flex-direction: column;
+
+                h3{
+                    color: rgb(198, 198, 124);
+                }
+
+                .content{
+                    width:100%;
+                    padding:10px;
+                    background-color: white;
+                    border: 1px solid black;
+                    border-top-right-radius: 20px;
+                    border-top-left-radius:20px;
+                }
+
+                .button-control{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    a{
+                        background-color: yellow;
+                        margin: 0 auto;
+                        text-decoration: none;
+                        border-radius:20px;
+                        padding:15px;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="map-control">
+            <img src="./Images/9072382.jpg" alt="">
+        </div>
+        <div class="content">
+            <h1>รายละเอียด</h1>
+            <ul>
+                <h3>จุดเริ่มต้น</h3>
+                <li>บิ๊กซี พระราม 4</li>
+                <h3>จุดหมายปลายถึง</h3>
+                <li>สจล คณะ ไอที</li>
+                <h3>วิธีการเดินทาง</h3>
+                <li>แท็กซี่</li>
+                <h3>วัน-เวลา</h3>
+                <li>17 พ.ย. | 18:00</li>
+                <h3>ค่าใช่จ่ายโดยประมาณ</h3>
+                <li>200 บาท</li>
+                <h3>รายละเอียดเพิ่มเติม</h3>
+                <li>หาคนนั้งแท็กซี่เป็นเพื่อนครับ</li>
+            </ul>
+            <div class="button-control"><a href="JourneyCreation.html">เข้าร่วมการเดินทาง</a></div>
+        </div>
+    </div>
+</body>
+
+</html>
